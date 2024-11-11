@@ -11,6 +11,15 @@ spring:
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.MySQLDialect
+spring:
+  profiles: h2
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
   cloud:
     config:
       uri: http://localhost:8860
